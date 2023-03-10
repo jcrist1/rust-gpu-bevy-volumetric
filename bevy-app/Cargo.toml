@@ -1,0 +1,23 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/viewer",
+]
+default-members = ["crates/viewer"]
+
+[patch.crates-io]
+bevy = { git = "https://github.com/Shfty/bevy", branch = "early-shader-defs-0.10.0" }
+
+# Fast-compile config
+[profile.dev]
+opt-level = 0
+overflow-checks = true
+debug-assertions = true
+debug = true
+codegen-units = 16
+lto = false
+incremental = true
+
+# Use opt level 3 for dependencies
+[profile.dev.package."*"]
+opt-level = 3

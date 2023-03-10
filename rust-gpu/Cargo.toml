@@ -1,0 +1,7 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/shader",
+]
+default-members = ["crates/shader"]
+

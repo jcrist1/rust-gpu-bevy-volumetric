@@ -1,0 +1,20 @@
+[package]
+name = "viewer"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = []
+webgl = []
+
+[[example]]
+name = "simple-material"
+path = "examples/simple-material.rs"
+
+[[example]]
+name = "standard-material"
+path = "examples/standard-material.rs"
+
+[dependencies]
+bevy = "0.10.0"
+bevy-rust-gpu = { git = "https://github.com/Bevy-Rust-GPU/bevy-rust-gpu", tag = "v0.4.0" }
